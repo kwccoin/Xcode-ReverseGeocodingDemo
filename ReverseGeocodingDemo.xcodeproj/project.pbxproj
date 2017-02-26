@@ -12,6 +12,7 @@
 		387AF83B1E62E19A0057EAF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387AF8391E62E19A0057EAF8 /* Main.storyboard */; };
 		387AF83D1E62E19A0057EAF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387AF83C1E62E19A0057EAF8 /* Assets.xcassets */; };
 		387AF8401E62E19A0057EAF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387AF83E1E62E19A0057EAF8 /* LaunchScreen.storyboard */; };
+		387AF8481E62ED410057EAF8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 387AF8471E62ED410057EAF8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		387AF83C1E62E19A0057EAF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		387AF83F1E62E19A0057EAF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		387AF8411E62E19A0057EAF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387AF8471E62ED410057EAF8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		387AF8291E62E19A0057EAF8 = {
 			isa = PBXGroup;
 			children = (
+				387AF8471E62ED410057EAF8 /* README.md */,
 				387AF8341E62E19A0057EAF8 /* ReverseGeocodingDemo */,
 				387AF8331E62E19A0057EAF8 /* Products */,
 			);
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387AF8481E62ED410057EAF8 /* README.md in Sources */,
 				387AF8381E62E19A0057EAF8 /* ViewController.swift in Sources */,
 				387AF8361E62E19A0057EAF8 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +303,7 @@
 				387AF8461E62E19A0057EAF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

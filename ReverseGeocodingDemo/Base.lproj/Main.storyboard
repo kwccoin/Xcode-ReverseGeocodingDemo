@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReverseGeocodingDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="22.280247" borderStyle="roundedRect" placeholder="latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFE-65-QaW">
+                                <rect key="frame" x="16" y="39" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="114.184309" borderStyle="roundedRect" placeholder="longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Imi-ah-NGV">
+                                <rect key="frame" x="16" y="87" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse geocoding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j88-1s-FZP">
+                                <rect key="frame" x="16" y="147" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rd8-Iw-upm">
+                                <rect key="frame" x="16" y="176" width="343" height="110"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npE-fm-KsO">
+                                <rect key="frame" x="16" y="294" width="343" height="30"/>
+                                <state key="normal" title="Start reverse geocoding"/>
+                                <connections>
+                                    <action selector="startReverseGeocoding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22M-64-K2X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="npE-fm-KsO" firstAttribute="top" secondItem="Rd8-Iw-upm" secondAttribute="bottom" constant="8" symbolic="YES" id="6Io-Be-iF8"/>
+                            <constraint firstItem="Imi-ah-NGV" firstAttribute="leading" secondItem="j88-1s-FZP" secondAttribute="leading" id="7CW-87-gsR"/>
+                            <constraint firstItem="Rd8-Iw-upm" firstAttribute="top" secondItem="j88-1s-FZP" secondAttribute="bottom" constant="8" symbolic="YES" id="Bfc-Vz-TNF"/>
+                            <constraint firstItem="npE-fm-KsO" firstAttribute="leading" secondItem="Rd8-Iw-upm" secondAttribute="leading" id="GqU-V7-MKS"/>
+                            <constraint firstItem="j88-1s-FZP" firstAttribute="top" secondItem="Imi-ah-NGV" secondAttribute="bottom" constant="30" id="KNn-h1-hAt"/>
+                            <constraint firstItem="bFE-65-QaW" firstAttribute="leading" secondItem="Imi-ah-NGV" secondAttribute="leading" id="Tts-0x-6TI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="npE-fm-KsO" secondAttribute="bottom" constant="343" id="bWI-hT-myJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rd8-Iw-upm" secondAttribute="leading" id="fqc-Iz-74w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rd8-Iw-upm" secondAttribute="trailing" id="iXK-o5-Mqo"/>
+                            <constraint firstItem="Imi-ah-NGV" firstAttribute="trailing" secondItem="j88-1s-FZP" secondAttribute="trailing" id="k07-nb-Rsy"/>
+                            <constraint firstItem="bFE-65-QaW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mHR-z1-Vme"/>
+                            <constraint firstItem="bFE-65-QaW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nXh-6S-Nn6"/>
+                            <constraint firstItem="bFE-65-QaW" firstAttribute="trailing" secondItem="Imi-ah-NGV" secondAttribute="trailing" id="y1b-Dc-fdF"/>
+                            <constraint firstItem="bFE-65-QaW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="yf8-kQ-00Q"/>
+                            <constraint firstItem="npE-fm-KsO" firstAttribute="trailing" secondItem="Rd8-Iw-upm" secondAttribute="trailing" id="zDQ-ot-2Dr"/>
+                            <constraint firstItem="Imi-ah-NGV" firstAttribute="top" secondItem="bFE-65-QaW" secondAttribute="bottom" constant="18" id="zjf-E4-GoQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="geocodingResultTextView" destination="Rd8-Iw-upm" id="2Qx-fE-Q1S"/>
+                        <outlet property="latLabel" destination="bFE-65-QaW" id="MMk-6y-TFB"/>
+                        <outlet property="lngLabel" destination="Imi-ah-NGV" id="gxn-uB-ba2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
